@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soulglasses | Tienda</title>
+    <title>Soulglasses | Eyewear for the Soul</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="overlay" id="overlay"></div>
 
     <div class="side-drawer" id="login-drawer">
-        <div class="drawer-header">
-            <h3>Iniciar Sesión</h3>
-            <button class="close-drawer">&times;</button>
-        </div>
+        <div class="drawer-header"><h3>Iniciar Sesión</h3><button class="close-drawer">&times;</button></div>
         <div class="drawer-content">
             <form>
-                <div class="form-group"><label>Email o Usuario *</label><input type="email" required></div>
-                <div class="form-group"><label>Contraseña *</label><input type="password" required></div>
+                <div style="margin-bottom: 20px;"><label style="display:block; margin-bottom:5px; font-size:13px; font-weight:600;">Email o Usuario *</label><input type="email" required style="width:100%; padding:10px; border:1px solid #ddd;"></div>
+                <div style="margin-bottom: 20px;"><label style="display:block; margin-bottom:5px; font-size:13px; font-weight:600;">Contraseña *</label><input type="password" required style="width:100%; padding:10px; border:1px solid #ddd;"></div>
                 <button type="submit" class="btn btn-solid" style="width: 100%">Log In</button>
-                <div class="login-links"><label><input type="checkbox"> Recuérdame</label><a href="#">¿Olvidaste tu contraseña?</a></div>
+                <div style="display:flex; justify-content:space-between; margin-top:15px; font-size:13px;"><label><input type="checkbox"> Recuérdame</label><a href="#">¿Olvidaste tu contraseña?</a></div>
                 <div style="text-align: center; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
                     <p style="font-size: 13px; margin-bottom: 15px;">¿No tienes cuenta?</p>
                     <a href="account.html" class="btn" style="width: 100%">Crear una cuenta</a>
@@ -29,40 +26,34 @@
     </div>
 
     <div class="side-drawer" id="cart-drawer">
-        <div class="drawer-header">
-            <h3>Tu Carrito (1)</h3>
-            <button class="close-drawer">&times;</button>
-        </div>
+        <div class="drawer-header"><h3>Tu Carrito (1)</h3><button class="close-drawer">&times;</button></div>
         <div class="drawer-content">
             <div style="display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=200" alt="Gafas" style="width: 80px; height: 80px; object-fit: cover;">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=200" style="width: 80px; height: 80px; object-fit: cover;">
                 <div><h4 style="font-size: 14px;">Tulip Aviator</h4><p style="font-size: 13px; color: #888;">1 x $39.22</p></div>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: bold;"><span>Subtotal:</span><span>$39.22</span></div>
             <a href="cart.html" class="btn" style="width: 100%; margin-bottom: 10px;">Ver Carrito</a>
-            <a href="#" class="btn btn-solid" style="width: 100%">Checkout</a>
+            <a href="checkout.html" class="btn btn-solid" style="width: 100%">Checkout</a>
         </div>
     </div>
 
     <div class="lightbox" id="quick-view-lightbox">
         <div class="lightbox-content">
             <button class="lb-close" id="close-lightbox">&times;</button>
-            <div class="lb-image"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800" alt="Producto"></div>
+            <div class="lb-image"><img id="lb-img" src="" alt="Producto"></div>
             <div class="lb-details">
-                <span class="lb-category">Flowers</span>
-                <h2 class="lb-title">Duoshade Flowers</h2>
-                <span class="lb-price">$68.19</span>
-                <p class="lb-desc">Gafas de sol premium con protección UV400. Diseño exclusivo para destacar tu estilo en cualquier ocasión.</p>
+                <span class="lb-category" id="lb-cat">Categoría</span>
+                <h2 class="lb-title" id="lb-title">Nombre del Producto</h2>
+                <span class="lb-price" id="lb-price">$0.00</span>
+                <div class="lb-tags" id="lb-tags"></div>
+                <p style="font-size: 14px; margin-bottom: 20px;">Gafas de sol premium con protección UV400. Diseño exclusivo para destacar tu estilo en cualquier ocasión.</p>
                 <h4 style="font-size: 12px; text-transform: uppercase; margin-bottom: 10px;">Color</h4>
-                <div class="color-options">
-                    <div class="color-swatch active" style="background-color: #000000;"></div>
-                    <div class="color-swatch" style="background-color: #7a5c43;"></div>
-                    <div class="color-swatch" style="background-color: #d4af37;"></div>
-                </div>
+                <div class="color-options" id="lb-colors"></div>
                 <div class="lb-actions"><input type="number" value="1" min="1" class="qty-input"><button class="btn btn-solid" style="flex: 1;">Añadir al carrito</button></div>
                 <div class="meta-actions">
-                    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> Add to Wishlist</a>
-                    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> Compare</a>
+                    <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> Wishlist</a>
+                    <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> Comparar</a>
                 </div>
             </div>
         </div>
@@ -71,7 +62,31 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Soulglasses</a>
-            <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="category.html">Aviator</a></li><li><a href="category.html">Brave Heart</a></li></ul></nav>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="shop.html">Shop ▾</a>
+                        <div class="dropdown-menu">
+                            <a href="shop.html">Accesorios</a>
+                            <a href="shop.html">Aviator</a>
+                            <a href="shop.html">Brave Heart</a>
+                            <a href="shop.html">Cat Eye</a>
+                            <a href="shop.html">Flowers</a>
+                            <a href="shop.html">Oversized</a>
+                            <a href="shop.html">Premium</a>
+                            <a href="shop.html">Rectangle</a>
+                            <a href="shop.html">Retro Vintage</a>
+                            <a href="shop.html">Round</a>
+                            <a href="shop.html">Shapes</a>
+                            <a href="shop.html">Square</a>
+                            <a href="shop.html">Straps</a>
+                        </div>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
             <div class="header-icons">
                 <button class="icon-btn"><svg viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></button>
                 <button class="icon-btn" id="login-toggle"><svg viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg></button>
@@ -86,35 +101,90 @@
                 <h6>Premium Collection</h6>
                 <h1>Eleva tu outfit con estilo</h1>
                 <p>Encuentra tu par ideal. Diseños originales y marcas premium para destacar tu personalidad en cada mirada.</p>
-                <a href="shop.html" class="btn">Shop Now</a>
+                <a href="shop.html" class="btn btn-solid">Comprar Ahora</a>
             </div>
         </section>
 
-        <section class="container" style="padding: 100px 0;">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <h6>Eyewear for the soul</h6>
-                <h2 style="font-size: 40px;">Últimas Tendencias</h2>
+        <section class="container">
+            <div class="promo-grid">
+                <div class="promo-box" style="background-image: url('https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?w=800');">
+                    <h6>Promo Especial</h6>
+                    <h2>2x1 en Brave Heart</h2>
+                    <a href="shop.html" class="btn" style="border-color:white; color:white;">Ver Modelos</a>
+                </div>
+                <div class="promo-box" style="background-image: url('https://images.unsplash.com/photo-1508296695146-257a814070b4?w=800');">
+                    <h6>Nueva Colección</h6>
+                    <h2>Summer Vintage</h2>
+                    <a href="shop.html" class="btn btn-solid">Descubrir</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 60px 0;">
+            <div class="section-title">
+                <h6>Descubre algo nuevo</h6>
+                <h2>Recién Llegados</h2>
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600" alt="Tulip Aviator"><div class="quick-view-btn">Quick View</div></div>
-                    <h3 class="product-title">Tulip Aviator</h3><span class="product-price">$39.22</span>
+                    <div class="product-img-wrap"><span class="new-badge">New</span><img src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=600"><div class="quick-view-btn" data-id="5">Quick View</div></div>
+                    <h3 class="product-title">Oversized Glam</h3><span class="product-price">$85.50</span>
                 </div>
                 <div class="product-card">
-                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600" alt="Flowers"><div class="quick-view-btn">Quick View</div></div>
-                    <h3 class="product-title">Duoshade Flowers</h3><span class="product-price">$68.19</span>
+                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1614715838608-dd527c46231d?w=600"><div class="quick-view-btn" data-id="6">Quick View</div></div>
+                    <h3 class="product-title">Cat Eye Chic</h3><span class="product-price">$55.00</span>
                 </div>
                 <div class="product-card">
-                    <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?w=600" alt="Brave Heart"><div class="quick-view-btn">Quick View</div></div>
-                    <h3 class="product-title">Brave Heart (Yellow)</h3><span class="product-price">$68.19</span>
+                    <div class="product-img-wrap"><span class="sale-badge">Sale</span><img src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=600"><div class="quick-view-btn" data-id="4">Quick View</div></div>
+                    <h3 class="product-title">Retro Vintage 90s</h3><span class="product-price">$45.00</span>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="shop.html" class="btn">Ver Catálogo Completo</a>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0 0 0;">
+            <div class="section-title" style="margin-bottom: 20px;">
+                <h6>In the Spotlight</h6>
+                <h2>@soulglasseseyewear</h2>
+            </div>
+            <div class="insta-grid">
+                <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400"><div class="insta-icon">📷</div></a>
+                <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?w=400"><div class="insta-icon">📷</div></a>
+                <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"><div class="insta-icon">📷</div></a>
+                <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400"><div class="insta-icon">📷</div></a>
+                <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1556306535-0f09a536f01f?w=400"><div class="insta-icon">📷</div></a>
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 50px;">
-        <div class="container"><p style="text-align:center; padding: 20px 0; border-top: 1px solid #ddd;">Soulglasses Eyewear for the Soul – Copyright © 2026</p></div>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h2 style="font-family: var(--font-headings); font-size: 24px; margin-bottom: 10px;">Soulglasses</h2>
+                    <p>Eyewear for the Soul.</p>
+                </div>
+                <div>
+                    <h6>Categorías</h6>
+                    <ul><li><a href="shop.html">Aviator</a></li><li><a href="shop.html">Cat Eye</a></li><li><a href="shop.html">Premium</a></li></ul>
+                </div>
+                <div>
+                    <h6>Enlaces</h6>
+                    <ul><li><a href="#">Privacidad</a></li><li><a href="#">Políticas de compra</a></li><li><a href="account.html">Mi Cuenta</a></li></ul>
+                </div>
+                <div>
+                    <h6>Contacto</h6>
+                    <p>Village Plaza 2do piso junto a "Gloss"</p>
+                    <p>Guayaquil, Ecuador</p>
+                    <p>+593 99 177 1658</p>
+                </div>
+            </div>
+            <p style="text-align:center; padding-top: 20px; border-top: 1px solid #ddd; font-size: 13px;">Copyright © 2026 Soulglasses Eyewear for the Soul</p>
+        </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
