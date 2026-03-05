@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulglasses | Carrito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div><div class="side-drawer" id="cart-drawer"></div><div class="side-drawer" id="login-drawer"></div>
+
+    <header class="site-header header-solid">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Soulglasses</a>
+            <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li></ul></nav>
+            <div class="header-icons">
+                <button class="icon-btn" id="login-toggle"><svg viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container"><h1 class="page-title">Carrito de Compras</h1></div>
+        </div>
+
+        <div class="container">
+            <table class="cart-table">
+                <thead><tr><th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="cart-item-info">
+                                <a href="#" style="color: red; font-size: 24px; font-weight:bold; line-height:1;">&times;</a>
+                                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=200" alt="Gafas">
+                                <a href="#">Tulip Aviator - Black</a>
+                            </div>
+                        </td>
+                        <td>$39.22</td>
+                        <td><input type="number" value="1" min="1" class="qty-input" style="padding: 10px;"></td>
+                        <td><strong>$39.22</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="display:flex; justify-content:space-between; margin-bottom: 50px;">
+                <div style="display:flex; gap: 10px;">
+                    <input type="text" placeholder="Código de cupón" style="padding: 15px; border: 1px solid #ddd; width: 250px;">
+                    <button class="btn">Aplicar cupón</button>
+                </div>
+                <button class="btn">Actualizar carrito</button>
+            </div>
+
+            <div class="cart-totals">
+                <h3>Total del carrito</h3>
+                <div class="totals-row"><span>Subtotal</span><span>$39.22</span></div>
+                <div class="totals-row"><span>Envío</span><span>Calculado en el checkout</span></div>
+                <div class="totals-row" style="border-top: 2px solid #000; padding-top: 15px; font-weight: bold; font-size: 18px;">
+                    <span>Total</span><span>$39.22</span>
+                </div>
+                <a href="#" class="btn btn-solid" style="width: 100%; margin-top: 20px;">Proceder al Checkout</a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px;"><div class="container"><p style="text-align:center; padding: 20px 0; border-top: 1px solid #ddd;">Soulglasses Eyewear for the Soul – Copyright © 2026</p></div></footer>
+    <script src="main.js"></script>
+</body>
+</html>
