@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulglasses | Mi Cuenta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div><div class="side-drawer" id="cart-drawer"></div><div class="side-drawer" id="login-drawer"></div>
+
+    <header class="site-header header-solid">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Soulglasses</a>
+            <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li></ul></nav>
+            <div class="header-icons">
+                <button class="icon-btn" id="cart-toggle"><svg viewBox="0 0 512 512"><path d="M160 448c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm314.59-317.06l-46.94 200.41A48.068 48.068 0 0 1 380.93 368H165.73a48.006 48.006 0 0 1-46.91-37.5L81.04 112H16C7.16 112 0 104.84 0 96V64c0-8.84 7.16-16 16-16h80c8.11 0 14.93 6.08 15.92 14.1l14.28 113.9h362.48c14.61 0 24.36 14.39 19.91 28.94zM384 448c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg><span style="margin-left:5px;">(1)</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container"><h1 class="page-title">Mi Cuenta</h1></div>
+        </div>
+
+        <div class="container account-layout">
+            <aside class="account-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Órdenes</a>
+                <a href="#">Comparar (0)</a>
+                <a href="#">Wishlist (2)</a>
+                <a href="#">Direcciones</a>
+                <a href="#">Detalles de cuenta</a>
+                <a href="#">Cerrar sesión</a>
+            </aside>
+
+            <div class="account-content">
+                <p>Hola, <strong>Arkan</strong> (¿no eres tú? <a href="#" style="text-decoration: underline;">Cerrar sesión</a>)</p>
+                <p style="margin-top: 10px;">Desde el panel de control de tu cuenta, puedes ver tus órdenes recientes, gestionar tus direcciones de envío y facturación, y editar tu contraseña y los detalles de tu cuenta.</p>
+
+                <div class="dashboard-box">
+                    <div class="box">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:15px;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <h3>Órdenes</h3>
+                        <a href="#" class="btn" style="padding: 10px 20px; margin-top: 15px;">Ver Órdenes</a>
+                    </div>
+                    <div class="box">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:15px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        <h3>Wishlist</h3>
+                        <a href="#" class="btn" style="padding: 10px 20px; margin-top: 15px;">Ver Wishlist</a>
+                    </div>
+                    <div class="box">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:15px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <h3>Direcciones</h3>
+                        <a href="#" class="btn" style="padding: 10px 20px; margin-top: 15px;">Editar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px;"><div class="container"><p style="text-align:center; padding: 20px 0; border-top: 1px solid #ddd;">Soulglasses Eyewear for the Soul – Copyright © 2026</p></div></footer>
+    <script src="main.js"></script>
+</body>
+</html>
